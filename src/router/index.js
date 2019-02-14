@@ -7,14 +7,26 @@ export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [{
-      path: '/',
-      name: 'home',
-      component: () => import('@/views/home')
+      path: '*',
+      redirect: '/'
     },
     {
-      path: '/about',
-      name: 'about',
-      component: () => import('@/views/setting')
-    }
+      path: '/',
+      name: 'home',
+      redirect:'overview',
+      component: () => import('@/views/home'),
+      children: [{
+          path: 'overview',
+          name: 'overview',
+          component: () => import('@/views/overview')
+        },
+        {
+          path: 'setting',
+          name: 'setting',
+          component: () => import('@/views/setting')
+        }
+      ]
+    },
+
   ]
 })

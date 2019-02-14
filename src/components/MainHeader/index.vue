@@ -1,13 +1,13 @@
 <template>
   <div class="MainHeader">
     <el-row :gutter="24">
-      <el-col :span="4">
-        <div class="grid-content bg-purple">
+      <el-col :span="5">
+        <div>
           <h1 class="top_logo"><i class="fa fa-bar-chart"></i> Element Admine</h1>
         </div>
       </el-col>
-      <el-col :span="3" :offset="17">
-        <div class="grid-content bg-purple">
+      <el-col :span="5" :offset="14">
+        <div>
           <el-button>登录</el-button>
           <el-button>注册</el-button>
         </div>
